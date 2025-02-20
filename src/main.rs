@@ -5,6 +5,7 @@ use rlt::{cli::BenchCli, IterInfo, IterReport, BenchSuite};
 use tokio::time::Instant;
 use reqwest::{Client, Url};
 
+/// Lets to gets all program arguments into setup configuration.
 #[derive(Parser, Clone)]
 struct HttpPostBench {
     // Target URL
@@ -18,6 +19,7 @@ struct HttpPostBench {
     pub bench_opts: BenchCli,
 }
 
+/// Send post request according to HttpPostBench configuration.
 #[async_trait]
 impl BenchSuite for HttpPostBench {
     type WorkerState = Client;
