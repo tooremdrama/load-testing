@@ -34,13 +34,15 @@ Test on add-promocode has Success as response.
 
 `cargo run --release http://localhost:8080/is-promocode-valid "{\"promocode_name\": \"test_is_valid_promocode_meteo_invalid\", \"arguments\": { \"age\": 20, \"town\": \"lyon\" }}" -c 8`
 
+- Another example with a different route and json
+
 `cargo run --release http://localhost:8080/add-promocode "{\"name\": \"Promocode-test_add_promocode_with_weather\",\"advantage\": {\"percent\": 39}, \"restrictions\": [{\"weather\" : {\"is\": \"Clouds\",\"temp\": {\"gt\": -1000}}}]}"`
 
 
 
 # Usage
 
-
+```
 Usage : cargo run --release -- <URL> <JSON> [Options]
 
 
@@ -101,3 +103,4 @@ Options:
 
   -h, --help
           Print help (see a summary with '-h')
+```
