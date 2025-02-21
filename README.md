@@ -15,9 +15,9 @@ In the following examples we show how to use this tool with the promocode API.
 
 [https://github.com/tooremdrama/promocode]
 
-Test on is-promocode-valid has Error as responce.
+Test on is-promocode-valid has Error as response.
 
-Test on add-promocode has Success as response.
+Test on add-promocode has Success as response only for the first request because we can't add a promo code with a name already used.
 
 
 # Examples of command to test promocode API :
